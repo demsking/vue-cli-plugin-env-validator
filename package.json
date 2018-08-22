@@ -2,12 +2,12 @@
   "name": "vue-app-env",
   "version": "1.0.0",
   "description": "Library to load Vue CLI 3 Environment Variables with type checking and required behavior",
-  "main": "main.js",
+  "main": "lib/main.js",
   "directories": {
     "lib": "lib"
   },
   "scripts": {
-    "lint": "eslint .",
+    "lint": "eslint lib",
     "test": "jest --testURL='http://localhost'"
   },
   "repository": {
