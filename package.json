@@ -8,7 +8,7 @@
   },
   "scripts": {
     "lint": "eslint lib test",
-    "test": "jest --collectCoverage=true --testMatch='<rootDir>/test/*.spec.js'"
+    "test": "vue-cli-service test:unit"
   },
   "repository": {
     "type": "git",
@@ -26,11 +26,11 @@
   },
   "homepage": "https://gitlab.com/demsking/vue-app-env",
   "devDependencies": {
-    "@babel/core": "^7.0.0-rc.2",
-    "@babel/preset-env": "^7.0.0-rc.2",
-    "babel-jest": "^23.4.2",
-    "eslint": "^5.4.0",
-    "jest": "^23.5.0",
-    "regenerator-runtime": "^0.12.1"
+    "@vue/cli-plugin-babel": "^3.0.1",
+    "@vue/cli-plugin-unit-jest": "^3.0.1",
+    "@vue/cli-service": "^3.0.1",
+    "babel-core": "7.0.0-bridge.0",
+    "babel-jest": "^23.0.1",
+    "eslint": "^5.4.0"
   }
 }
