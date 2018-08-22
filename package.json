@@ -1,0 +1,32 @@
+{
+  "name": "vue-app-env",
+  "version": "1.0.0",
+  "description": "Library to load Vue CLI 3 Environment Variables with type checking and required behavior",
+  "main": "main.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "scripts": {
+    "lint": "eslint .",
+    "test": "jest --testURL='http://localhost'"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@gitlab.com/demsking/vue-app-env.git"
+  },
+  "keywords": [
+    "vue",
+    "vue-cli",
+    "env"
+  ],
+  "author": "Sébastien Demanou",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://gitlab.com/demsking/vue-app-env/issues"
+  },
+  "homepage": "https://gitlab.com/demsking/vue-app-env",
+  "devDependencies": {
+    "eslint": "^5.4.0",
+    "jest": "^23.5.0"
+  }
+}
