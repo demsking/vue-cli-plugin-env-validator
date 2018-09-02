@@ -1,11 +1,11 @@
-import VueAppEnv from '..'
+const Validator = require('../lib/validator.js')
 
 /* global describe it expect */
 
-describe('lib/main.js', () => {
+describe('lib/validator.js', () => {
   describe('Required Value', () => {
     it('should throw an error for a missing environment variable', () => {
-      expect(() => VueAppEnv.get({
+      expect(() => Validator.load({
         MISSING_ENV_NAME: {
           type: Number,
           required: true
@@ -21,7 +21,7 @@ describe('lib/main.js', () => {
       }
 
       it('without type', () => {
-        expect(VueAppEnv.get({
+        expect(Validator.load({
           TEST_HOST: {
             required: true
           }
@@ -29,56 +29,13 @@ describe('lib/main.js', () => {
       })
 
       it('with missing type', () => {
-        expect(VueAppEnv.get({
+        expect(Validator.load({
           TEST_HOST: {
             type: String,
             required: true
           }
         })).toEqual(expected)
       })
-    })
-  })
-
-  describe('Default Value', () => {
-    it('should load a required environment variable', () => {
-      const expected = {
-        TEST_DEFAULT_HOST: 'localhost'
-      }
-
-      expect(VueAppEnv.get({
-        TEST_DEFAULT_HOST: {
-          default: 'localhost'
-        }
-      })).toEqual(expected)
-    })
-
-    it('should load missing default value', () => {
-      const config = VueAppEnv.get({
-        TEST_DEFAULT_MISSING_X: {
-          type: String
-        }
-      })
-
-      const expected = {
-        TEST_DEFAULT_MISSING_X: undefined
-      }
-
-      expect(config).toEqual(expected)
-    })
-  })
-
-  describe('Name Mapping', () => {
-    it('should successfully load with a name mapping', () => {
-      const expected = {
-        hostname: 'localhost'
-      }
-
-      expect(VueAppEnv.get({
-        TEST_DEFAULT_HOST: {
-          name: 'hostname',
-          default: 'localhost'
-        }
-      })).toEqual(expected)
     })
   })
 
@@ -94,7 +51,7 @@ describe('lib/main.js', () => {
 
         process.env[ENV_NAME] = ENV_VALUE
 
-        expect(VueAppEnv.get({
+        expect(Validator.load({
           TEST_X: {
             type: Number
           }
@@ -109,7 +66,7 @@ describe('lib/main.js', () => {
 
         process.env[ENV_NAME] = ENV_VALUE
 
-        expect(VueAppEnv.get({
+        expect(Validator.load({
           TEST_X: {
             type: Number
           }
@@ -121,7 +78,7 @@ describe('lib/main.js', () => {
 
         process.env[ENV_NAME] = ENV_VALUE
 
-        expect(() => VueAppEnv.get({
+        expect(() => Validator.load({
           TEST_X: {
             type: Number
           }
@@ -140,7 +97,7 @@ describe('lib/main.js', () => {
 
         process.env[ENV_NAME] = ENV_VALUE
 
-        expect(VueAppEnv.get({
+        expect(Validator.load({
           TEST_X: {
             type: Boolean
           }
@@ -155,7 +112,7 @@ describe('lib/main.js', () => {
 
         process.env[ENV_NAME] = ENV_VALUE
 
-        expect(VueAppEnv.get({
+        expect(Validator.load({
           TEST_X: {
             type: Boolean
           }
@@ -167,7 +124,7 @@ describe('lib/main.js', () => {
 
         process.env[ENV_NAME] = ENV_VALUE
 
-        expect(() => VueAppEnv.get({
+        expect(() => Validator.load({
           TEST_X: {
             type: Boolean
           }
