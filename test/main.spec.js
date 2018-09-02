@@ -1,6 +1,6 @@
 import VueAppEnv from '..'
 
-/* global describe it process expect */
+/* global describe it expect */
 
 describe('lib/main.js', () => {
   describe('Required Value', () => {
