@@ -23,16 +23,12 @@ module.exports = {
           type: String,
           required: true
         },
-        VUE_APP_FIREBASE_AUTH_DOMAIN: {
-          type: String,
+        VUE_APP_ENABLE_FIREBASE_AUTH: {
+          type: Boolean,
           required: true
         },
-        VUE_APP_FIREBASE_DATABASE_URL: {
-          type: String,
-          required: true
-        },
-        VUE_APP_FIREBASE_PROJECT_ID: {
-          type: String,
+        VUE_APP_FIREBASE_AUTH_PWD_MIN_LENGTH: {
+          type: Number,
           required: true
         }
       }
@@ -55,16 +51,12 @@ module.exports = {
           type: String,
           required: true
         },
-        FIREBASE_AUTH_DOMAIN: {
+        ENABLE_FIREBASE_AUTH: {
           type: String,
           required: true
         },
-        FIREBASE_DATABASE_URL: {
-          type: String,
-          required: true
-        },
-        FIREBASE_PROJECT_ID: {
-          type: String,
+        FIREBASE_AUTH_PWD_MIN_LENGTH: {
+          type: Number,
           required: true
         }
       }
