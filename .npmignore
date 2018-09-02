@@ -1,0 +1,9 @@
+test
+coverage
+jest.config.js
+.*
+*.json
+*.lock
+*.tgz
+*.svg
+*.png

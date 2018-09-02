@@ -1,0 +1,33 @@
+{
+  "name": "vue-cli-plugin-env-validator",
+  "version": "1.0.0",
+  "description": "A Vue CLI Plugin to validate Environment Variables with type checking and required behavior",
+  "main": "plugin/service.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "scripts": {
+    "lint": "eslint lib plugin test",
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@gitlab.com/demsking/vue-cli-plugin-env-validator.git"
+  },
+  "keywords": [
+    "vue",
+    "vue-cli",
+    "env",
+    "validator"
+  ],
+  "author": "Sébastien Demanou",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://gitlab.com/demsking/vue-cli-plugin-env-validator/issues"
+  },
+  "homepage": "https://gitlab.com/demsking/vue-cli-plugin-env-validator",
+  "devDependencies": {
+    "eslint": "^5.4.0",
+    "jest": "^23.5.0"
+  }
+}
