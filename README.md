@@ -1,6 +1,6 @@
 # Vue CLI Env Validator Plugin
 
-A Vue CLI Plugin to validate Environment Variables with type checking and required behavior.
+A Vue CLI Plugin to validate Environment Variables with type checking like Vue Props.
 
 [![npm](https://img.shields.io/npm/v/vue-cli-plugin-env-validator.svg)](https://www.npmjs.com/package/vue-cli-plugin-env-validator) [![Build status](https://gitlab.com/demsking/vue-cli-plugin-env-validator/badges/master/build.svg)](https://gitlab.com/demsking/vue-cli-plugin-env-validator/commits/master) [![Test coverage](https://gitlab.com/demsking/vue-cli-plugin-env-validator/badges/master/coverage.svg)](https://gitlab.com/demsking/vue-cli-plugin-env-validator/pipelines)
 
