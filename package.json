@@ -1,7 +1,7 @@
 {
   "name": "vue-cli-plugin-env-validator",
   "version": "1.0.0",
-  "description": "Library to load Vue CLI 3 Environment Variables with type checking and required behavior",
+  "description": "A Vue CLI Plugin to validate Environment Variables with type checking and required behavior",
   "main": "plugin/service.js",
   "directories": {
     "lib": "lib"
