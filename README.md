@@ -7,7 +7,7 @@ A Vue CLI Plugin to validate Environment Variables with type checking and requir
 ## Install
 
 ```sh
-npm install --save-dev vue-cli-plugin-env-validator
+vue add env-validator
 ```
 
 ## Usage
