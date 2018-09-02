@@ -3,6 +3,53 @@ const Validator = require('../lib/validator.js')
 /* global describe it expect */
 
 describe('lib/validator.js', () => {
+  describe('Arguments', () => {
+    describe('prefix', () => {
+      it('should load with default value', () => {
+        process.env.TEST_HOST = 'localhost'
+
+        expect(Validator.load({
+          schema: {
+            TEST_HOST: {
+              required: true
+            }
+          }
+        }))
+      })
+
+      it('should load with defined value', () => {
+        process.env.VUE_APP_TEST_HOST = 'localhost'
+
+        expect(Validator.load({
+          prefix: 'VUE_APP_',
+          schema: {
+            TEST_HOST: {
+              required: true
+            }
+          }
+        }))
+      })
+    })
+
+    describe('schema', () => {
+      it('should load with default value', () => {
+        expect(Validator.load({}))
+      })
+
+      it('should load with defined value', () => {
+        process.env.TEST_HOST = 'localhost'
+
+        expect(Validator.load({
+          schema: {
+            TEST_HOST: {
+              required: true
+            }
+          }
+        }))
+      })
+    })
+  })
+
   describe('Required Value', () => {
     it('should throw an error for a missing environment variable', () => {
       expect(() => Validator.load({
